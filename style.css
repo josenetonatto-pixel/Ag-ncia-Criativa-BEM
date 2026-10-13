@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Syne:wght@700;800&family=Inter:wght@400;700&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    background-color: #e6e2dd;
+    background-image: radial-gradient(#d1ccc7 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+
+.layout {
+    display: grid;
+    grid-template-areas: 
+        "header header header header"
+        "sidebar main main aside"
+        "footer footer footer footer";
+    grid-template-columns: 3rem 1fr 1fr 3rem;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.layout__area--header { grid-area: header; }
+.layout__area--sidebar { grid-area: sidebar; } 
+.layout__area--aside { grid-area: aside; }
+
+.layout__area--main { 
+    grid-area: main;
+    background-color: #f4f1ea;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-left: 2px solid #1a1a1a;
+    border-right: 2px solid #1a1a1a;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.layout__area--footer {
+    grid-area: footer;
+    background: #7ca9c5;
+    color: #1a1a1a;
+    text-align: center;
+    padding: 1.5rem;
+    grid-column: 1 / -1;
+    border-top: 3px solid #1a1a1a;
+    font-family: 'Special Elite', cursive;
+}
+
+
+
+/* --- Cabeçalho --- */
+.header {
+    background-color: #f4f1ea;
+    border-bottom: 3px solid #1a1a1a;
+    padding: 1rem 1.5rem;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header__logo-img {
+    width: 90px;
+    height: auto;
+    display: block;
+    border: 2px solid #1a1a1a;
+    border-radius: 4px;
+    box-shadow: 2px 2px 0px #1a1a1a;
+    background-color: #fff;
+}
+
+.header__text {
+    flex: 1;
+    text-align: center;
+}
+
+.header__title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 2rem; 
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    color: #1a1a1a;
+    margin: 0 0 0.8rem 0;
+    text-shadow: 2px 2px 0px #ffb6c1;
+}
+
+/* --- Menu de navegação --- */
+.nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.nav__link { 
+    text-decoration: none;
+    color: #1a1a1a;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.nav__link:hover {
+    border-bottom: 2px solid #1a1a1a;
+    background-color: #ffb6c1;
+    padding: 0.1rem 0.4rem;
+}
+
+/* --- Banner --- */
+.banner {
+    width: 100%;
+    height: 20rem;
+    background-image: 
+        linear-gradient(135deg, rgba(124, 169, 197, 0.75) 0%, rgba(255, 182, 193, 0.75) 100%), 
+        url('still-life-graphic-design-studio.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #1a1a1a;
+    border-radius: 4px;
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+.banner__title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -1px;
+    background: #1a1a1a;
+    color: #f4f1ea;
+    padding: 0.2rem 0.8rem;
+    transform: rotate(-2deg);
+}
+
+.banner__text {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.2rem;
+    margin: 0;
+    background: #f4f1ea;
+    padding: 0.4rem 0.8rem;
+    border: 2px solid #1a1a1a;
+    transform: rotate(1deg);
+}
+
+/* --- Carrossel --- */
+.carousel {
+    width: 100%;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scrollbar-width: thin; 
+    scrollbar-color: #1a1a1a #f4f1ea;
+}
+
+.carousel::-webkit-scrollbar {
+    height: 6px;
+}
+
+.carousel::-webkit-scrollbar-track {
+    background: #f4f1ea;
+    border-radius: 4px;
+}
+
+.carousel::-webkit-scrollbar-thumb {
+    background: #1a1a1a;
+    border-radius: 4px;
+}
+
+.carousel__track {
+    display: flex;
+    gap: 1.2rem;
+    padding-bottom: 0.5rem;
+    scroll-snap-type: x mandatory; 
+}
+
+.card {
+    background-color: #ffffff;
+    border: 3px solid #1a1a1a;
+    border-radius: 6px;
+    box-shadow: 3px 3px 0px #1a1a1a;
+    scroll-snap-align: start;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+.card--service {
+    min-width: 15rem;
+    padding: 1.5rem 1rem;
+    text-align: left;
+}
+
+.card__title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.card__description {
+    font-size: 0.9rem;
+    color: #444;
+    margin: 0;
+}
+
+.card--testimonial {
+    min-width: 17rem;
+    padding: 0.6rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card__img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+
+.main-section {
+    padding: 2rem 0;
+    border-bottom: 2px dashed #ccc;
+}
+
+.main-section__title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.main-section__text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.contact {
+    padding: 2rem 0;
+    text-align: left;
+}
+
+.contact__title {
+    font-family: 'Syne', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.8rem;
+    text-align: center;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact__text {
+    text-align: center;
+    max-width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact__grid {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact__info, 
+.contact__form-container {
+    flex: 1;
+    min-width: 16rem;
+    background-color: #ffffff;
+    border: 3px solid #1a1a1a;
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 3px 3px 0px #1a1a1a;
+}
+
+.contact__subtitle {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.3rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.contact__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact__item {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+}
+
+.contact__link {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.form__group {
+    margin-bottom: 1rem;
+}
+
+.form__input, 
+.form__textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid #1a1a1a;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.button--submit {
+    background-color: #ffb6c1;
+    color: #1a1a1a;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    padding: 0.7rem 1.2rem;
+    border: 2px solid #1a1a1a;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 2px 2px 0px #1a1a1a;
+    width: 100%;
+}
+
+.button--submit:hover {
+    background-color: #7ca9c5;
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: 1rem 1fr 1fr 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+
+    .layout__area--sidebar, 
+    .layout__area--aside {
+        display: none;
+    }
+
+    .header__content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header__logo-img {
+        margin: 0 auto;
+    }
+
+    .banner {
+        height: 16rem;
+    }
+
+    .banner__title {
+        font-size: 1.8rem;
+    }
+
+    .banner__text {
+        font-size: 1rem;
+    }
+
+    .contact__grid {
+        flex-direction: column;
+    }
+}

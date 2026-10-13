@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência criativa web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="layout">
+
+        <header class="header layout__area--header">
+            <div class="header__content">
+                <!-- Logo posicionada no canto esquerdo -->
+                <div class="header__logo">
+                    <img src="LOGO.png" alt="Logo Agência Criativa Web" class="header__logo-img">
+                </div>
+
+                <div class="header__text">
+                    <h1 class="header__title">Bem-vindo à Agência Criativa</h1>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li><a href="#home" class="nav__link">Home</a></li>
+                            <li><a href="#sobre" class="nav__link">Sobre Nós</a></li>
+                            <li><a href="#servicos" class="nav__link">Serviços</a></li>
+                            <li><a href="#depoimentos" class="nav__link">Depoimentos</a></li>
+                            <li><a href="#contato" class="nav__link">Contato</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <main class="layout__area--main">
+
+            <section id="home" class="main-section">
+                <div class="banner">
+                    <h2 class="banner__title">Design no DNA</h2>
+                    <p class="banner__text">Criamos soluções visuais e digitais inovadoras para transformar o seu negócio.</p>
+                </div>
+            </section>
+
+            <section id="sobre" class="main-section">
+                <h2 class="main-section__title">Sobre Nós</h2>
+
+                <h3>Quem Somos</h3>
+                <p class="main-section__text">Na intersecção entre a estratégia de negócios e a pura expressão visual, nós nascemos para dar forma, voz e movimento às grandes ideias. Somos uma agência de design criativa movida pela convicção de que o design vai muito além da estética: ele constrói identidades, desperta conexões genuínas e transforma marcas em experiências inesquecíveis.</p>
+
+                <h3>O Que Nos Move</h3>
+                <p class="main-section__text">Essência Estratégica: Cada traço, cor e conceito nasce de um profundo entendimento do seu negócio, público e objetivos de mercado.</p>
+                <p class="main-section__text">Paixão pela Criação: Unimos sensibilidade artística e rigor técnico para entregar projetos visuais marcantes e funcionais.</p>
+                <p class="main-section__text">Parceria de Longo Prazo: Acreditamos que os melhores resultados vêm da colaboração próxima, transparente e alinhada com a sua visão.</p>
+
+                <h3>A Nossa Abordagem</h3>
+                <p class="main-section__text">Do branding e design de embalagens às experiências digitais e campanhas de impacto, combinamos criatividade autêntica e tecnologia para resolver desafios complexos com simplicidade e elegância.</p>
+
+                <h2 class="main-section__title">"Não criamos apenas imagens; criamos narrativas visuais que geram valor real e deixam marcas duradouras no mundo."</h2>
+                <p class="main-section__text">Vamos juntos transformar o seu próximo grande projeto em realidade?</p>
+            </section>
+
+            <section id="servicos" class="main-section">
+                <h2 class="main-section__title">Serviços</h2>
+                <p class="main-section__text">Conheça os nossos serviços criativos...</p>
+                
+                <!-- Carrossel de Serviços -->
+                <div class="carousel">
+                    <div class="carousel__track">
+                        <div class="card card--service">
+                            <h3 class="card__title">Branding & Identidade</h3>
+                            <p class="card__description">Criação de marcas autênticas e visuais marcantes.</p>
+                        </div>
+                        <div class="card card--service">
+                            <h3 class="card__title">Web Design & UI/UX</h3>
+                            <p class="card__description">Interfaces modernas, responsivas e focadas na experiência.</p>
+                        </div>
+                        <div class="card card--service">
+                            <h3 class="card__title">Direção de Arte</h3>
+                            <p class="card__description">Conceitos visuais únicos para campanhas e projetos.</p>
+                        </div>
+                        <div class="card card--service">
+                            <h3 class="card__title">Design Gráfico</h3>
+                            <p class="card__description">Peças impressas e digitais com estética editorial.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="depoimentos" class="main-section">
+                <h2 class="main-section__title">Depoimentos</h2>
+                <p class="main-section__text">O que os nossos clientes dizem sobre o nosso trabalho...</p>
+                
+                <!-- Carrossel de Depoimentos -->
+                <div class="carousel">
+                    <div class="carousel__track">
+                        <div class="card card--testimonial">
+                            <img src="cliente-1.png" alt="Depoimento Equipe A Casa das Ideias" class="card__img">
+                        </div>
+                        <div class="card card--testimonial">
+                            <img src="cliente-2.png" alt="Depoimento Pedro Almeida - Techsolve" class="card__img">
+                        </div>
+                        <div class="card card--testimonial">
+                            <img src="cliente-3.png" alt="Depoimento Maria Silva - Flora Design" class="card__img">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contato" class="contact">
+                <h2 class="contact__title">Vamos Conversar?</h2>
+                <p class="contact__text">Tem um novo projeto em mente, quer tirar uma ideia do papel ou precisa elevar o posicionamento da sua marca? Estamos prontos para transformar desafios em experiências visuais.</p>
+
+                <div class="contact__grid">
+                    <!-- Informações de Contato -->
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">Fale Com a Gente</h3>
+                        <ul class="contact__list">
+                            <li class="contact__item"><strong>E-mail:</strong> <a href="mailto:contato@agenciacriativa.com.br" class="contact__link">contato@agenciacriativa.com.br</a></li>
+                            <li class="contact__item"><strong>WhatsApp:</strong> <a href="https://wa.me/5581999999999" target="_blank" class="contact__link">(81) 99999-9999</a></li>
+                            <li class="contact__item"><strong>Endereço:</strong> Recife - PE, Brasil</li>
+                        </ul>
+                    </div>
+
+                    <!-- Formulário de Contato -->
+                    <form class="contact__form-container">
+                        <h3 class="contact__subtitle">Envie uma Mensagem</h3>
+                        <div class="form__group">
+                            <input type="text" placeholder="Seu Nome" required class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <input type="email" placeholder="Seu E-mail" required class="form__input">
+                        </div>
+                        <div class="form__group">
+                            <textarea placeholder="Conte sobre o seu projeto..." rows="4" required class="form__textarea"></textarea>
+                        </div>
+                        <button type="submit" class="button--submit">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+        <aside class="layout__area--sidebar"></aside>
+        <aside class="layout__area--aside"></aside>
+
+        <footer class="layout__area--footer">
+           <p>&copy; 2026 Agência Criativa Web. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+    
+</body>
+</html>
